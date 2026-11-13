@@ -1,0 +1,7 @@
+"constraint_name","constraint_type"
+"post_likes_created_at_not_null","CHECK"
+"post_likes_post_id_not_null","CHECK"
+"post_likes_user_id_not_null","CHECK"
+"fk_post_likes_post","FOREIGN KEY"
+"fk_post_likes_user","FOREIGN KEY"
+"pk_post_likes","PRIMARY KEY"

@@ -1,0 +1,7 @@
+"constraint_name","constraint_type"
+"comment_likes_comment_id_not_null","CHECK"
+"comment_likes_created_at_not_null","CHECK"
+"comment_likes_user_id_not_null","CHECK"
+"fk_comment_likes_comment","FOREIGN KEY"
+"fk_comment_likes_user","FOREIGN KEY"
+"pk_comment_likes","PRIMARY KEY"

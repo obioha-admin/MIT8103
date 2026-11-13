@@ -1,0 +1,2 @@
+"constraint_name","column_name","referenced_table","referenced_column"
+"fk_posts_user","user_id","users","user_id"
