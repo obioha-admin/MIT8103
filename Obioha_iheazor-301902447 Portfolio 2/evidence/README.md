@@ -1,0 +1,1 @@
+Save real screenshots under screenshots/ and exported query plans/results in this folder. Suggested names: q1_before.txt, q1_after.txt, ..., q4_before.txt, q4_after.txt, counts.csv, indexes.csv. Do not fabricate results.

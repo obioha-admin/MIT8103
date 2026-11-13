@@ -1,0 +1,6 @@
+| Query | Before | After | Change |
+|--------|--------|--------|--------|
+| Q1 | 3.007 ms | 0.222 ms | 92.6% faster |
+| Q2 | 1.202 ms | 1.237 ms | 2.9% slower |
+| Q3 | 2.907 ms | 2.912 ms | 0.2% slower |
+| Q4 | 55.615 ms | 46.598 ms | 16.2% faster |
