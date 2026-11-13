@@ -1,0 +1,11 @@
+const p4db=db.getSiblingDB('connectsphere_p4_db');
+print('Q1: latest public posts');
+printjson(p4db.posts.find({visibility:'public'},{content:1,createdAt:1,_id:1}).sort({createdAt:-1}).limit(5).toArray());
+print('Q2: posts with >=3 embedded comments');
+printjson(p4db.posts.find({'comments.2':{$exists:true}},{content:1,comments:1}).limit(3).toArray());
+print('Q3: top posts by likes');
+printjson(p4db.posts.aggregate([{$project:{content:1,likeCount:{$size:'$likedBy'}}},{$sort:{likeCount:-1,_id:1}},{$limit:5}]).toArray());
+print('Q4: events grouped by type');
+printjson(p4db.activity_events.aggregate([{$group:{_id:'$type',count:{$sum:1}}},{$sort:{_id:1}}]).toArray());
+print('Q5: one author joined to users using $lookup');
+printjson(p4db.posts.aggregate([{$limit:1},{$lookup:{from:'users',localField:'authorId',foreignField:'_id',as:'author'}},{$project:{content:1,'author.username':1}}]).toArray());
